@@ -18,8 +18,8 @@
          // получаем тело ответа (см. про этот метод ниже)
       let json = await response.json();
       let arr = json.attributes
-      for(let i = 0; i < arr.lenth; i++){
-        document.write(arr[i].name);
+      for(let i = 0; i<json.attributes.length; i++){
+        document.write(json.attributes[i].name);
       }
     } else {
       alert("Ошибка HTTP: " + response.status);
