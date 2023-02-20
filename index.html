@@ -18,7 +18,7 @@
          // получаем тело ответа (см. про этот метод ниже)
       let json = await response.json();
       let arr = json.attributes
-      for(i = 0; i < arr.lenth; i++){
+      for(let i = 0; i < arr.lenth; i++){
         document.write(arr[i].name);
       }
     } else {
