@@ -17,7 +17,7 @@
     if (response.ok) { // если HTTP-статус в диапазоне 200-299
          // получаем тело ответа (см. про этот метод ниже)
       let json = response.json();
-      alert json.attributes.DataSheetURL
+      alert(json.attributes.DataSheetURL);
     } else {
       alert("Ошибка HTTP: " + response.status);
     }
