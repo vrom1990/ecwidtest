@@ -32,8 +32,8 @@
     
     pdfURL = getProduct()
     
-    const pasted = document.getElementById("pasted")
-    const pdfA = document.createElement("a");
+    let pasted = document.getElementById("pasted")
+    let pdfA = document.createElement("a");
     pdfA.href = pdfURL;
     pdfA.innerText = "Ссылка на документ"
     pasted.appendChild(pdfA)
