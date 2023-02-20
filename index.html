@@ -19,19 +19,25 @@
          // получаем тело ответа (см. про этот метод ниже)
       let json = await response.json();
       let arr = json.attributes
-      for(let i = 0; i < arr.lenth; i++){
-        if (arr[i].name == "DataSheetURL"){
+      for(let i = 0; i < arr.length; i++){
+        document.write(arr[i].name + "<br>")
+        if (String(arr[i].name) == "DataSheetURL"){
          findedURL = arr[i].value;
         }
       }
     } else {
       alert("Ошибка HTTP: " + response.status);
     }
-      alert(findedURL);
       return findedURL;
     }
     
-    let pdfURL = getProduct()
+    pdfURL = getProduct()
+    
+    const pasted = document.getElementById("pasted")
+    const pdfA = document.createElement("a");
+    pdfA.href = pdfURL;
+    pdfA.innerText = "Ссылка на документ"
+    pasted.appendChild(pdfA)
   </script>
 </body>
 </html>
