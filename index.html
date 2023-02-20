@@ -6,7 +6,8 @@
   </div>
   
   <script>
-    let response = await fetch("https://app.ecwid.com/api/v3/15819020/products/374344796", {
+    
+    let response = fetch("https://app.ecwid.com/api/v3/15819020/products/374344796", {
         headers: {
          Accept: "application/json",
          Authorization: "Bearer secret_ytsdTuyXLNBM4gktVt22UxUZVNe9cgZC",
@@ -15,7 +16,7 @@
     });
     if (response.ok) { // если HTTP-статус в диапазоне 200-299
          // получаем тело ответа (см. про этот метод ниже)
-      let json = await response.json();
+      let json = response.json();
       alert json.attributes.DataSheetURL
     } else {
       alert("Ошибка HTTP: " + response.status);
