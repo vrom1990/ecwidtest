@@ -28,16 +28,16 @@
       alert("Ошибка HTTP: " + response.status);
     }
       alert(findedURL)
-      return findedURL;
+      let pasted = document.getElementById("pasted")
+      let pdfA = document.createElement("a");
+      pdfA.href = findedURL;
+      pdfA.innerText = "Ссылка на документ"
+      pasted.appendChild(pdfA)
     }
     
-    pdfURL = await getProduct()
+    getProduct()
     
-    let pasted = document.getElementById("pasted")
-    let pdfA = document.createElement("a");
-    pdfA.href = pdfURL;
-    pdfA.innerText = "Ссылка на документ"
-    pasted.appendChild(pdfA)
+    
   </script>
 </body>
 </html>
